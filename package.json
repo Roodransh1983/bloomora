@@ -1,0 +1,27 @@
+{
+  "name": "bloomora-platform",
+  "version": "1.0.0",
+  "description": "BLOOMORA - Premium Sustainable E-Commerce & Donation Platform",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "db:seed": "cd server && npm run db:seed",
+    "db:push": "cd server && npm run db:push",
+    "db:reset": "cd server && npm run db:reset",
+    "db:studio": "cd server && npm run db:studio"
+  },
+  "keywords": [
+    "bloomora",
+    "sustainability",
+    "upcycling",
+    "e-commerce",
+    "react",
+    "express",
+    "prisma"
+  ],
+  "author": "BLOOMORA Team",
+  "license": "ISC"
+}

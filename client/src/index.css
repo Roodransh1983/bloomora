@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ivory font-sans text-charcoal;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+  * {
+    @apply box-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-forest text-ivory px-6 py-3 rounded-full font-sans font-medium hover:bg-forest-light transition-colors duration-200 inline-flex items-center gap-2 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply border border-forest text-forest px-6 py-3 rounded-full font-sans font-medium hover:bg-forest hover:text-ivory transition-colors duration-200 inline-flex items-center gap-2 cursor-pointer;
+  }
+  .btn-terracotta {
+    @apply bg-terracotta text-ivory px-6 py-3 rounded-full font-sans font-medium hover:bg-terracotta-dark transition-colors duration-200 inline-flex items-center gap-2 cursor-pointer;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-beige overflow-hidden hover:shadow-md transition-shadow duration-300;
+  }
+  .input {
+    @apply w-full px-4 py-3 border border-beige rounded-xl focus:outline-none focus:ring-2 focus:ring-sage focus:border-sage bg-white font-sans text-charcoal placeholder-charcoal/40;
+  }
+  .label {
+    @apply block text-sm font-medium text-charcoal/70 mb-1 font-sans;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-forest leading-tight;
+  }
+  .section-subtitle {
+    @apply text-lg text-charcoal/60 font-sans max-w-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
