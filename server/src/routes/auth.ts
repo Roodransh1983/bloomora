@@ -7,7 +7,10 @@ import { authenticateToken } from '../middleware/auth.js';
 import type { AuthenticatedRequest } from '../middleware/auth.js';
 
 const router = Router();
-const JWT_SECRET = process.env.JWT_SECRET || 'bloomora_jwt_secret_key_sustainable_beauty_2026';
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  throw new Error('JWT_SECRET must be set in server/.env');
+}
 
 // ─── POST /api/auth/register ──────────────────────────────────────────────────
 router.post('/register', async (req, res: Response) => {
